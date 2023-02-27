@@ -1,0 +1,43 @@
+{
+  "locale": [
+    "en"
+  ],
+  "service": "DESK",
+  "storage": true,
+  "type": "personal",
+  "whiteListedDomains": [],
+  "modules": {
+    "widgets": [
+      {
+        "location": "desk.ticket.detail.subtab",
+        "url": "/app/widget.html",
+        "name": "TENOR WIDGET BANK TEST",
+        "logo": "/app/img/mail.png",
+        "icon": "/app/img/mail.png"
+      }
+    ]
+  },
+  "cspDomains": {
+    "connect-src": []
+  },
+  "zohoAuthorisation": {
+    "connectionLinkName": "deskconnection",
+    "connectionName": "deskConnection",
+    "serviceName": "zlabs_integration",
+    "type":"connectors",
+    "userAccess": false,
+    "isUserDefinedService": false,
+    "sharedBy": "803677172",
+    "scope": [
+      "Desk.tickets.ALL",
+      "Desk.settings.ALL",
+      "Desk.search.READ",
+      "Desk.extensions.ALL",
+      "Desk.contacts.ALL",
+      "Desk.basic.ALL"
+    ]
+  },
+  "connectors": [],
+  "config": [],
+  "moduleSupport": false
+}

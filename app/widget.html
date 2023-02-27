@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>ALVIN WIDGET</title>
+   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+   <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+ <div class="flex justify justify-items-center items-center p-5 mx-auto">
+
+
+ <button class="font-sans bg-[#4a516b] hover:bg-[#b270d6]-white text-[10px] text-white font-bold py-2 px-4 rounded" id="openModal">Create Entry</button>
+
+ <div class="posts-list row" id="posts-list"></div>
+
+
+ <div class="flex justify-items-center items-center">
+  <div class="fixed z-10 inset-0 overflow-y-auto hidden" id="CreateModal">
+   <div class="flex items-center justify-center min-h-screen">
+     
+     <div class="  bg-transparent p-5 overflow-hidden rounded-lg w-1/2">
+       <div class="px-4 py-2 w-full  bg-[#4a516b]">
+         <h2 class="text-lg font-medium text-white">Create Modal</h2>
+       </div>
+       <div class="p-4 bg-[#f5f3ff] rounded">
+         <div class="flex justify-center items-center bg-[#f5f3ff] p-5 overflow-hidden">
+           <form class="mt-[10px] add-post-form ">
+  
+    
+  
+  
+  
+  
+               <div class="flex flex-row -mx-4 mb-6">
+                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                   <label class="block uppercase tracking-wide text-[#abc1c9d2] text-xs font-bold mb-2 text-[10px]">
+                    BANKS
+                   </label>
+                   <div class="relative">
+                    <select name="product" id="bank" class="block appearance-none w-full text-[8px] border border-white-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none hover:bg-[#f3f0e6] focus:bg-white focus:border-gray-500  shadow-inner ...  shadow-white-500/40 focus:shadow-inner focus:border-none"  id="grid-state">
+                      <option class="focus:shadow-inner focus:border-none" defaultValue={null}>Choose BANK</option>
+                      <option class="focus:shadow-inner focus:border-none">Asia United Bank</option>
+                      <option class="focus:shadow-inner focus:border-none">Bank of Commerce</option>
+                      <option class="focus:shadow-inner focus:border-none">Eastwest Bank</option>
+                    </select>
+                 
+                   </div>
+              
+                 </div>
+                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-[#abc1c9d2] text-xs font-bold mb-2 text-[10px]">
+                      CLIENT TENORS
+                    </label>
+                    <div class="relative">
+                      <select name="product" id="tenors" class="block appearance-none w-full text-[8px] border border-white-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none hover:bg-[#f3f0e6] focus:bg-white focus:border-gray-500  shadow-inner ...  shadow-white-500/40 focus:shadow-inner focus:border-none"  id="grid-state">
+                       <option class="focus:shadow-inner focus:border-none" defaultValue={null}>Choose  CLIENT TENORS</option>
+                       <option class="focus:shadow-inner focus:border-none">Installment</option>
+                       <option class="focus:shadow-inner focus:border-none">Installment BNPL</option>
+                       <option class="focus:shadow-inner focus:border-none">Promo and Zero Installment</option>
+                      </select>
+                    
+                    </div>
+                
+                   </div>
+           
+                </div>
+  
+  
+  
+                
+               <div class="flex flex-row -mx-4 mb-6">
+                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                   <label class="block uppercase tracking-wide text-[#abc1c9d2] text-xs font-bold mb-2 text-[10px]">
+                    MID
+                   </label>
+                   <div class="relative">
+                    <select name="product" id="mid" class="block appearance-none w-full text-[8px]  border border-white-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none hover:bg-[#f3f0e6] focus:bg-white focus:border-gray-500  shadow-inner ...  shadow-white-500/40 focus:shadow-inner focus:border-none"  id="grid-state">
+                      <option class="focus:shadow-inner focus:border-none" defaultValue={null}>Choose MID</option>
+                      <option class="focus:shadow-inner focus:border-none">900004600000007</option>
+                      <option class="focus:shadow-inner focus:border-none">900005000000090</option>
+                      <option class="focus:shadow-inner focus:border-none">900005000000020</option>
+                      <option class="focus:shadow-inner focus:border-none">900004700000075</option>
+                      <option class="focus:shadow-inner focus:border-none">900004600000021</option>
+                      <option class="focus:shadow-inner focus:border-none">900004600000032</option>
+                      <option class="focus:shadow-inner focus:border-none">900005000000021</option>
+                      <option class="focus:shadow-inner focus:border-none">900004700000156</option>
+                      <option class="focus:shadow-inner focus:border-none">900004700000074</option>
+                      <option class="focus:shadow-inner focus:border-none">900004700000072</option>
+                      <option class="focus:shadow-inner focus:border-none">900004700000079</option>
+                      <option class="focus:shadow-inner focus:border-none">900005000000132</option>
+                      <option class="focus:shadow-inner focus:border-none">900004800000019</option>
+                      <option class="focus:shadow-inner focus:border-none">900005000000030</option>
+                      <option class="focus:shadow-inner focus:border-none">900005000000103</option>
+  
+                    </select>
+                 
+                   </div>
+              
+                 </div>
+                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-[#abc1c9d2] text-xs font-bold mb-2 text-[10px]">
+                     TID
+                    </label>
+                    <div class="relative">
+                      <select name="product" id="tid" class="block appearance-none w-full text-[8px]  border border-white-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none hover:bg-[#f3f0e6] focus:bg-white focus:border-gray-500  shadow-inner ...  shadow-white-500/40 focus:shadow-inner focus:border-none"  id="grid-state">
+                       <option class="focus:shadow-inner focus:border-none" defaultValue={null}>Choose TID</option>
+                       <option class="focus:shadow-inner focus:border-none">30000890</option>
+                       <option class="focus:shadow-inner focus:border-none">30001224</option>
+                       <option class="focus:shadow-inner focus:border-none">30001154</option>
+                       <option class="focus:shadow-inner focus:border-none">30001023</option>
+                       <option class="focus:shadow-inner focus:border-none">30000904</option>
+                       <option class="focus:shadow-inner focus:border-none">30000915</option>
+                       <option class="focus:shadow-inner focus:border-none">30001155</option>
+                       <option class="focus:shadow-inner focus:border-none">30001834</option>
+                       <option class="focus:shadow-inner focus:border-none">30001022</option>
+                       <option class="focus:shadow-inner focus:border-none">30001020</option>
+                       <option class="focus:shadow-inner focus:border-none">30001027</option>
+                       <option class="focus:shadow-inner focus:border-none">30001266</option>
+                       <option class="focus:shadow-inner focus:border-none">30001824</option>
+                       <option class="focus:shadow-inner focus:border-none">30001164</option>
+                       <option class="focus:shadow-inner focus:border-none">30001237</option>
+                      </select>
+                    
+                    </div>
+                
+                   </div>
+           
+                </div>
+  
+  
+                <div class="relative flex items-center mb-4 px-2 mx-auto">
+                 <input type="text" name="name" id="addtl_Inst" value="OK TO RELEASE WITH EXCEEDS LIMIT ERROR AND HOST TIME OUT" placeholder="OK TO RELEASE WITH EXCEEDS LIMIT ERROR AND HOST TIME OUT" class="font-sans static text-[8px] sm:w-60 w-50 md:w-80 lg:w-100 font-medium placeholder-[#999] border border-none text-[10px]  rounded-r-[30px] rounded-l-[20px] ring-1 ring-[#e0d4e4] p-3 focus:outline-none  bg-slate-300 shadow-sm " disabled  />
+                
+                 </div>
+     
+              
+               <div class="relative flex items-center px-2 mx-2">
+                 <button id="showList" 
+                 type="submit" class="btn font-sans bg-[#4a516b] hover:bg-[#b270d6] static sm:w-60 w-full md:w-80 lg:w-50 font-medium text-white text-[16px]  rounded-r-[30px] rounded-l-[20px] ring-1 ring-[#e0d4e4] p-3 focus:outline-none  shadow-sm text-center mt-7"     data-te-collapse-init
+                 data-te-target="#collapseWidthExample"
+                 data-te-ripple-init
+                 data-te-ripple-color="light"
+                 aria-expanded="false"
+                 aria-controls="collapseWidthExample">Create</button>
+               </div>
+               
+              </form>
+        </div>
+  
+         <button class="font-sans bg-[#4a516b] hover:bg-[#b270d6]-white text-[10px] text-white font-bold py-2 px-4 rounded" id="closeModal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<form class="mt-[10px] add-post-form ">  
+
+   <div class="flex items-center pl-5">
+    <div class=" mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-[#abc1c9d2] text-xs font-bold mb-2 text-[10px]">
+       TID
+      </label>
+      <div class="relative">
+        <select name="product" id="searchtid" class="block appearance-none mx-1 text-[8px] w-[150px] border border-white-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none hover:bg-[#f3f0e6] focus:bg-white focus:border-gray-500  shadow-inner ...  shadow-white-500/40 focus:shadow-inner focus:border-none" >
+         <option class="focus:shadow-inner focus:border-none" defaultValue={null}>Choose TID</option>
+         <option class="focus:shadow-inner focus:border-none">30000890</option>
+         <option class="focus:shadow-inner focus:border-none">30001224</option>
+         <option class="focus:shadow-inner focus:border-none">30001154</option>
+         <option class="focus:shadow-inner focus:border-none">30001023</option>
+         <option class="focus:shadow-inner focus:border-none">30000904</option>
+         <option class="focus:shadow-inner focus:border-none">30000915</option>
+         <option class="focus:shadow-inner focus:border-none">30001155</option>
+         <option class="focus:shadow-inner focus:border-none">30001834</option>
+         <option class="focus:shadow-inner focus:border-none">30001022</option>
+         <option class="focus:shadow-inner focus:border-none">30001020</option>
+         <option class="focus:shadow-inner focus:border-none">30001027</option>
+         <option class="focus:shadow-inner focus:border-none">30001266</option>
+         <option class="focus:shadow-inner focus:border-none">30001824</option>
+         <option class="focus:shadow-inner focus:border-none">30001164</option>
+         <option class="focus:shadow-inner focus:border-none">30001237</option>
+        </select>
+      
+      </div>
+  
+     </div>
+
+     <div class=" mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-[#abc1c9d2] text-xs font-bold mb-2 text-[10px]">
+       BANKS
+      </label>
+      <div class="relative">
+       <select name="product" id="searchbank" class="block appearance-none  mx-1 text-[8px] w-[150px] border border-white-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none hover:bg-[#f3f0e6] focus:bg-white focus:border-gray-500  shadow-inner ...  shadow-white-500/40 focus:shadow-inner focus:border-none" >
+         <option class="focus:shadow-inner focus:border-none" defaultValue={null}>Choose BANK</option>
+         <option class="focus:shadow-inner focus:border-none">Asia United Bank</option>
+         <option class="focus:shadow-inner focus:border-none">Bank of Commerce</option>
+         <option class="focus:shadow-inner focus:border-none">Eastwest Bank</option>
+       </select>
+    
+      </div>
+ 
+    </div>
+
+    <button  type="submit" id="get_data" class="p-2 bg-[#4a516b] rounded-lg text-[12px] mt-5 text-white">Search</button>
+
+    
+   </div>
+  </form>
+
+  <ul id="list">
+  </ul>
+</body>
+<script src="https://js.zohostatic.com/support/developer_sdk/v1/js/ZohoDeskClientSDK.min.js"></script>
+
+
+<!-- <script src="../js/extension.js" charset="utf-8"></script> -->
+
+
+<script>
+
+
+// Modal
+// Get the modal element
+var modal = document.getElementById("CreateModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("openModal");
+
+// Get the button that closes the modal
+var closeBtn = document.getElementById("closeModal");
+
+// When the user clicks on the button, open the modals
+btn.onclick = function() {
+  modal.classList.remove("hidden");
+}
+
+// When the user clicks on the close button, close the modal
+closeBtn.onclick = function() {
+  modal.classList.add("hidden");
+}
+
+// When the user clicks outside the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.classList.add("hidden");
+  }
+}
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let output='';
+let SerchOutput='';
+const postList =document.getElementById('posts-list');
+const searchList =document.getElementById('list');
+
+const showList = document.getElementById('showList');
+const getData = document.getElementById('get_data');
+const searchtid = document.getElementById('searchtid');
+const searchbank = document.getElementById('searchbank');
+
+// data inputs
+const _bank = document.getElementById('bank');
+const _tenors = document.getElementById('tenors');
+const _mid = document.getElementById('mid');
+const _tid = document.getElementById('tid');
+const _addtl_Inst = document.getElementById('addtl_Inst');
+
+
+
+window.onload = function(){
+    ZOHODESK.extension.onload().then((App)=>{
+
+
+
+
+
+
+
+
+
+
+
+// create
+showList.addEventListener('click',(e)=>{
+e.preventDefault();
+
+console.log(_bank.value)
+
+ZOHODESK.set("database",{"key":"customer","value":{"bank":_bank.value,"tenors":_tenors.value,"mid":_mid.value,"tid":_tid.value,"addtl_Inst":_addtl_Inst.value,"staticID":"staticId"},"queriableValue":_tid.value})
+.then(async (response)=>{
+
+
+
+
+let _postData = await JSON.stringify(response);
+
+let removeDot = _postData.replace('.', "");
+
+let polish = JSON.parse(removeDot)
+
+const result = polish.databaseset
+
+const dataValue = result.value
+console.log(result.value);
+console.log(dataValue.tid);
+//   console.log(queriableValue);
+
+if(result != null){
+  output += `
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"><h1>${result.queriableValue}</h1><h1>${result.key}</h1>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataValue.bank}</p>
+   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataValue.tenors}</p>
+   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataValue.mid}</p>
+   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataValue.tid}</p>
+   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataValue.addtl_Inst}</p>
+    <a href="#" class="card-link inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Delete
+    </a>
+</div>
+`
+}
+
+postList.innerHTML = output;
+
+})
+.catch( (err) => {
+   console.log("error")
+   alert(err)
+    console.log(err)
+})
+
+
+
+
+})
+
+
+
+// getdata
+
+getData.addEventListener('click',(e)=>{
+  console.log('click')
+
+  console.log(searchtid.value)
+   e.preventDefault();
+   ZOHODESK.get('database',{"queriableValue":searchtid.value}).then(async(response)=>{
+      
+      let _data = await response;
+
+
+  let _postData = await JSON.stringify(response);
+
+let removeDot = _postData.replace('.', "");
+
+let polish = JSON.parse(removeDot)
+
+let result = polish.databaseget
+
+let dataResult= result.data
+let dataPolish = dataResult[0]
+
+let dataPolishValue = dataPolish.value
+
+
+
+
+//   console.log(queriableValue);
+
+if(result != null){
+  SerchOutput += `
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"><h1>${dataPolish.queriableValue}</h1><h1>${dataPolish.key}</h1>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataPolishValue.bank}</p>
+   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataPolishValue.tenors}</p>
+   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataPolishValue.mid}</p>
+   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataPolishValue.tid}</p>
+   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${dataPolishValue.addtl_Inst}</p>
+    <a href="#" class="card-link inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Delete
+    </a>
+</div>
+`
+}else{
+  SerchOutput += `<h1>No data</h1>`
+}
+
+searchList.innerHTML = SerchOutput;
+
+
+   })
+   .catch(function(err){
+console.log(err)
+    })
+
+
+
+
+})
+}) 
+  }
+
+
+</script>
+
+</html>
